@@ -36,7 +36,7 @@
   
   <!-- 后台查询 -->
   <select id="getOrdersList" resultMap="BaseResultMap" parameterType="String">
-    select * from orders
+    select * from orders order by id desc
   </select>
    <select id="selectById" resultMap="BaseResultMap" >
     select * from orders where id=#{id,jdbcType=INTEGER}

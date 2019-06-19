@@ -74,6 +74,7 @@ table td{
 					<option value="" selected="selected">选择商品状态</option>
 					<option value="1">在售</option>
 					<option value="0">下架</option>
+					<option value="2">已售</option>
 					</select>
 				</div>
 					<div class="col-sm-4">
@@ -130,10 +131,13 @@ table td{
 							<td>${item.startTime}</td>
 							<td>
 							<c:if test="${item.status == 1}">
-							<span style="color:blue">在售</span>
+								<span style="color:blue">在售</span>
 							</c:if>
 							<c:if test="${item.status == 0}">
-							<span style="color:red">下架</span>
+								<span style="color:red">下架</span>
+							</c:if>
+							<c:if test="${item.status == 2}">
+								<span style="color:green">已售</span>
 							</c:if>
 							</td>
 							<td>
@@ -225,6 +229,7 @@ table td{
 						<select name="form" style="margin-top: 8px;width: 372px;height: 27px;">
 						<option value="0" selected="selected">下架</option>
 						<option value="1">上架</option>
+						<option value="2">已售</option>
 						</select>
 					</div>
 				</div>
@@ -341,8 +346,10 @@ table td{
 						$('#myviewform').find("textarea[name='describle']").val(json.describle);
 						if(json.form==1){
 							$('#myviewform').find("input[name='form']").val('在售');
-						}else{
+						}else if(json.form==0){
 							$('#myviewform').find("input[name='form']").val('下架');
+						}else{
+							$('#myviewform').find("input[name='form']").val('已售');
 						}
 						$('#viewModal').modal('toggle');
 					}

@@ -172,7 +172,7 @@
   </select>
   <!-- 后台查询 -->
   <select id="getGoodsList" resultMap="ResultMapWithBLOBs" parameterType="String">
-    select * from goods
+    select * from goods order by id desc
   </select>
   
    <select id="getPageGoodsByGoods" resultMap="ResultMapWithBLOBs">

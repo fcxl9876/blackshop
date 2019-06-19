@@ -193,14 +193,14 @@
                     <div class="col s12 title"></div>
                 </a>
                 <form action="<%=basePath%>user/login" method="post" role="form">
-                    <div clauss="inpt-field col s12">
+                    <div class="input-field col s12">
                         <input type="text" name="phone" id="login_phone" required="required" pattern="^1[0-9]{10}$" class="validate ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-touched" />
                         <label>手机&nbsp;&nbsp;<div id="login_errorPhone" style="color:red;display:inline;"></div></label>
                     </div>
                     <div class="input-field col s12">
                         <input type="password" id="login_password"  name="password" required="required" class="validate ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" />
                         <label>密码&nbsp;&nbsp;<div id="errorPassword" style="color:red;display:inline;"></div></label>
-                      <!--   <a ng-click="showForget()" class="forget-btn">忘记密码？</a> -->
+                        <a ng-click="showForget()" class="forget-btn">忘记密码？</a>
                     </div>
                     <button type="submit" id="loginIn" class="waves-effect waves-light btn login-btn red lighten-1">
                         <i class="iconfont left"></i>

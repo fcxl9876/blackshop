@@ -49,7 +49,7 @@
 			<li class="submenu"><a href="#"><i class="icon icon-fullscreen"></i>
 					<span>系统设置</span> </a>
 				<ul>
-					<li><a href="<c:url value="/back/order/findList"/>">关于我们</a></li>
+					<li><a href="#" onclick="javascript:alert('网站由黑店老板软件小组开发，仅供内部学习与使用。如果疑问，请联系我们。\n')">"关于我们</a></li>
 				</ul>
 			</li>
 		</ul>

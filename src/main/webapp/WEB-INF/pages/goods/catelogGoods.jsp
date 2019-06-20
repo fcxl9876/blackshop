@@ -267,8 +267,8 @@
         </a>
     </li>
     <div class="info">
-        <a href="" target="_blank">关于我们</a><em>-</em>
-        <a href="">联系我们</a>
+        <a href="#" onclick="javascript:alert('网站由黑店老板软件小组开发，仅供内部学习与使用。如果疑问，请联系我们。\n')">关于我们</a><em>-</em>
+        <a href="#" onclick="javascript:alert('QQ：821535576     EMAIL：821535576@qq.com\n')">联系我们</a>
         <p>©地大黑店</p>
     </div>
 </div>

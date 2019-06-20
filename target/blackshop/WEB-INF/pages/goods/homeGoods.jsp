@@ -194,13 +194,17 @@
                 </a>
                 <form action="<%=basePath%>user/login" method="post" role="form">
                     <div class="input-field col s12">
-                        <input type="text" name="phone" id="login_phone" required="required" pattern="^1[0-9]{10}$" class="validate ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-touched" />
-                        <label>手机&nbsp;&nbsp;<div id="login_errorPhone" style="color:red;display:inline;"></div></label>
+                        <input type="text" name="email" id="login_email" required="required" pattern="^[a-zA-Z0-9_-]+@[cugb]+\.[edu]+\.[cn]+$" class="validate ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-touched" />
+                        <label>邮箱&nbsp;&nbsp;<div id="login_errorEmail" style="color:red;display:inline;"></div></label>
                     </div>
+<%--                    <div clauss="inpt-field col s12">--%>
+<%--                        <input type="text" name="phone" id="login_phone" required="required" pattern="^1[0-9]{10}$" class="validate ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-touched" />--%>
+<%--                        <label>手机&nbsp;&nbsp;<div id="login_errorPhone" style="color:red;display:inline;"></div></label>--%>
+<%--                    </div>--%>
                     <div class="input-field col s12">
                         <input type="password" id="login_password"  name="password" required="required" class="validate ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" />
                         <label>密码&nbsp;&nbsp;<div id="errorPassword" style="color:red;display:inline;"></div></label>
-                        <a ng-click="showForget()" class="forget-btn">忘记密码？</a>
+                      <!--   <a ng-click="showForget()" class="forget-btn">忘记密码？</a> -->
                     </div>
                     <button type="submit" id="loginIn" class="waves-effect waves-light btn login-btn red lighten-1">
                         <i class="iconfont left"></i>
@@ -229,14 +233,17 @@
                 </a>
                 <form action="<%=basePath%>user/addUser" method="POST" role="form" id="signup_form">
                     <div class="input-field col s12">
+                        <input type="text" name="email" id="email" required="required" pattern="^[a-zA-Z0-9_-]+@[cugb]+\.[edu]+\.[cn]+$" class="validate ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-touched" />
+                        <label>邮箱<div id="errorEmail" style="color:red;display:inline;"></div></label>
+                    </div>
+                    <div class="input-field col s12">
                         <input type="text" name="username" required="required" class="validate ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-touched" />
                         <label>昵称</label>
                     </div>
-                    <div class="input-field col s12">
-                        <input type="text" name="phone" id="phone" required="required" pattern="^1[0-9]{10}$" class="validate ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-touched" />
-                        <label>手机&nbsp;&nbsp;<div id="errorPhone" style="color:red;display:inline;"></div></label>
-                           
-                    </div>
+<%--                    <div class="input-field col s12">--%>
+<%--                        <input type="text" name="phone" id="phone" required="required" pattern="^[0-9]{11}$" class="validate ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-touched" />--%>
+<%--                        <label>手机&nbsp;&nbsp;<div id="errorPhone" style="color:red;display:inline;"></div></label>--%>
+<%--                    </div>--%>
                     <div class="input-field col s12">
                         <input type="password" name="password" required="required" class="validate ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" />
                         <label>密码</label>
@@ -336,8 +343,10 @@
         </a>
     </li>
     <div class="info">
-        <a href="" target="_blank">关于我们</a><em>-</em>
-        <a href="">联系我们</a>
+        <a href="#" onclick="javascript:alert('网站由黑店老板软件小组开发，仅供内部学习与使用。如果疑问，请联系我们。\n')">关于我们</a><em>-</em>
+        <a href="#" onclick="javascript:alert('QQ：821535576     EMAIL：821535576@qq.com\n')">联系我们</a>
+<%--        error:function(){--%>
+<%--        alert('请求超时或系统出错!');--%>
         <p>©2019 地大黑店</p>
     </div>
 </div>
@@ -572,7 +581,7 @@
     </div>
     <div class="waterfoo stark-components row">
         <div class="item-wrapper normal">
-            <c:forEach var="item" items="${catelogGoods7}">
+            <c:forEach var="item" items="${catelogGoods7}">//
                 <div class="card col">
                     <a href="<%=basePath%>goods/goodsId/${item.goods.id}">
                         <div class="card-image">
